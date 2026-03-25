@@ -3,4 +3,4 @@
 ## Workflows
 
 - [Hello](.github/workflows/hello.yml)
-- [CICD Demo](.github/workflows.CICD.yml)
+- [CICD Demo](.github/workflows/CICD.yml)
