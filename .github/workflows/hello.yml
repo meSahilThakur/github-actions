@@ -2,8 +2,10 @@
 name: Hello workflow
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:             #It will run only when we click [continuous Delivery]
+  # push:                        #It will run every time when main branch will update [continuous Deployment]
+  #   branches: [main]
+  
 #These are jobs inside workflow
 jobs:
   #This is the name of the job
