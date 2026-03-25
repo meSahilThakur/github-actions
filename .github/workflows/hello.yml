@@ -2,9 +2,11 @@
 name: Hello workflow
 
 on:
-  workflow_dispatch:             #It will run only when we click [continuous Delivery]
-  # push:                        #It will run every time when main branch will update [continuous Deployment]
-  #   branches: [main]
+  # workflow_dispatch:             #It will trigger only when we click [continuous Delivery]
+  push:                        #It will trigger every time when main branch will update [continuous Deployment]
+    branches: [main]
+    paths:
+      - '**.html'
   
 #These are jobs inside workflow
 jobs:
