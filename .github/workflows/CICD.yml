@@ -10,18 +10,21 @@ jobs:                        #Here jobs will specified, Every job needs their ow
         run: echo "[git clone <url>] code clone from github."
 
   build:                        #This is job 2
+    needs: [code]
     runs-on: ubuntu-latest
     steps:
       - name: Build Docker Container
         run: echo "Docker Container Build"
 
   test:
+    needs: [code, build]
     runs-on: ubuntu-latest
     steps:
       - name: Test the Container
         run: echo "Testing the Container"
 
   deploy:
+    needs: [build, test]
     runs-on: ubuntu-latest
     steps:
       - name: Deploying the app
